@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <title>Budgtr App</title>
+</head>
+<body>
+    <div class='container'>
+
+        <h1><%=budgets.name%></h1>
+
+        <a href="/budgets">
+        <button>Back</button>
+        </a>
+
+        <h2>date </h2> <%=budgets.date%>
+        <h2>name</h2> <%=budgets.name%>
+        <h2>from</h2> <%=budgets.from%>
+        <h2>amount</h2> <%=budgets.amount%>
+        <h2>tags</h2> <%=budgets.tags%>
+
+    </div>
+</body>
+</html>

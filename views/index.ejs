@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <title>Budgtr App</title>
+</head>
+<body>
+    
+    
+    <div class='container'>
+
+    <h1>Budget List</h1>
+
+        <table>
+            <% for(let i=0; i < allBudgets.length; i++) { %>
+                <tr>
+                <td><%= allBudgets[i].date%></td>
+                <td>
+                    <a href="/budgets/<%=i%>"><%=allBudgets[i].name%></a>
+                </td>
+                <td><%= allBudgets[i].amount%></td>
+                
+                </tr>
+                <%let bankAccount = bankAccount + parseInt(allBudgets[i].amount)%>
+                <%if (bankAccount < 0) { %>
+                    <style type='text/css'>
+                        *{
+                            background-color: red;
+                        }
+                    </style>
+                <%} else if(bankAccount >1000){%>
+                    <style type='text/css'>
+                        *{
+                            background-color: rgb(21, 9, 254);
+                        }
+                    </style>
+                
+        </table>
+
+        <a href="/budgets/new"><button>Add to budget</button></a>
+
+    <h3 id='account'>Bank Account = <%=BankAccount%></h3>
+        
+    </div>
+
+
+
+
+</body>
+</html>
